@@ -1,66 +1,104 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f8f1ff;
+  background:
+    radial-gradient(circle at top left, #ff3df255, transparent 30%),
+    radial-gradient(circle at bottom right, #00e5ff55, transparent 30%),
+    linear-gradient(135deg, #12001f, #050014);
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
 
-/* 適合手機畫面 */
+/* 遊戲主卡片 */
 .game-container {
   width: 90%;
   max-width: 420px;
-  background: white;
-  padding: 24px;
-  border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  background: rgba(30, 10, 60, 0.75);
+  padding: 28px;
+  border-radius: 24px;
+  box-shadow:
+    0 0 20px rgba(155, 92, 255, 0.6),
+    0 0 40px rgba(0, 229, 255, 0.25);
   text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px);
 }
 
+/* 標題 */
 h1 {
-  font-size: 28px;
+  font-size: 30px;
+  color: white;
+  text-shadow:
+    0 0 8px #ff3df2,
+    0 0 18px #9b5cff;
 }
 
 h2 {
   font-size: 22px;
+  color: white;
 }
 
+p {
+  color: #e7d9ff;
+}
+
+/* 輸入框 */
 input {
   width: 90%;
-  padding: 12px;
+  padding: 14px;
   font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 12px;
+  border: 1px solid #9b5cff;
+  border-radius: 14px;
   margin-bottom: 16px;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  outline: none;
 }
 
+input::placeholder {
+  color: #c6b6dd;
+}
+
+input:focus {
+  box-shadow: 0 0 12px #00e5ff;
+}
+
+/* 一般按鈕 */
 button {
   width: 100%;
-  padding: 14px;
-  margin-top: 10px;
+  padding: 15px;
+  margin-top: 12px;
   font-size: 16px;
   border: none;
-  border-radius: 14px;
-  background: #9b72cf;
+  border-radius: 16px;
+  background: linear-gradient(90deg, #9b5cff, #ff3df2);
   color: white;
   cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0 14px rgba(255, 61, 242, 0.45);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 button:hover {
-  background: #8359b8;
+  transform: translateY(-2px);
+  box-shadow: 0 0 22px rgba(0, 229, 255, 0.65);
 }
 
+/* 選項按鈕 */
 .choice-btn {
-  background: #eee;
-  color: #333;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  border: 1px solid rgba(0, 229, 255, 0.5);
 }
 
 .choice-btn:hover {
-  background: #ddd;
+  background: linear-gradient(90deg, #00e5ff, #9b5cff);
+  color: white;
 }
 
+/* 隱藏畫面 */
 .hidden {
   display: none;
 }
