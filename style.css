@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8f1ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* 適合手機畫面 */
+.game-container {
+  width: 90%;
+  max-width: 420px;
+  background: white;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+input {
+  width: 90%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 14px;
+  background: #9b72cf;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #8359b8;
+}
+
+.choice-btn {
+  background: #eee;
+  color: #333;
+}
+
+.choice-btn:hover {
+  background: #ddd;
+}
+
+.hidden {
+  display: none;
+}
